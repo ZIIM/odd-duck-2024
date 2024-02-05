@@ -2,40 +2,55 @@
 
 console.log('I am loaded!!');
 
-let goats = [];
+let products = [];
 let image1 = document.getElementById('image1');
 let image2 = document.getElementById('image2');
+let image3 = document.getElementById('image3');
 
 // constructor function -> 'this' is the object we are creating.
-function Goat(url, name) {
+function Product(url, name) {
   this.url = url;
   this.name = name;
   this.clicks = 0;
 }
 
-let goat1 = new Goat('assets/images/cruisin-goat.jpg', 'Cruisin');
-let goat2 = new Goat('assets/images/float-your-goat.jpg', 'Floating Goat');
-let goat3 = new Goat('assets/images/goat-away.jpg', 'Goat Away');
-let goat4 = new Goat('assets/images/goat-logo.png', 'Goat Logo');
-let goat5 = new Goat('assets/images/goat-out-of-hand.jpg', 'Goat Hand');
-let goat6 = new Goat('assets/images/kissing-goat.jpg', 'Kissing Goat');
-let goat7 = new Goat('assets/images/sassy-goat.jpg', 'Sassy Goat');
-let goat8 = new Goat('assets/images/smiling-goat.jpg', 'Smiling Goat');
-let goat9 = new Goat('assets/images/sweater-goat.jpg', 'Sweater Goat');
+let product1 = new Product('img/img/bag.jpg', 'BAG');
+let product2 = new Product('img/img/banana.jpg', 'BANANA');
+let product3 = new Product('img/img/bathroom', 'BATHROOM');
+let product4 = new Product('img/img/boots', 'BOOTS');
+let product5 = new Product('img/img/breakfast', 'BREAKFAST');
+let product6 = new Product('img/img/bubblegum', 'BUBBLEGUM');
+let product7 = new Product('img/img/chair', 'CHAIR');
+let product8 = new Product('img/img/cthulhu', 'CTHULHU');
+let product9 = new Product('img/img/dog-duck', 'DOG-DUCK');
+let product10 = new Product('img/img/dragon', 'DRAGON');
+let product11 = new Product('img/img/pen', 'PEN');
+let product12 = new Product('img/img/pet-sweep', 'PET-SWEEP');
+let product13 = new Product('img/img/scissors', 'SCISSORS');
+let product14 = new Product('img/img/shark', 'SHARK');
+let product15 = new Product('img/img/sweep', 'SWEEP');
+let product16 = new Product('img/img/tauntaun', 'TAUNTAUN');
+let product17 = new Product('img/img/unicorn', 'UNICORN');
+let product18 = new Product('img/img/water-can', 'WATER-CAN');
+let product19 = new Product('img/img/wine-glass', 'WINE-GLASS');
 
-goats.push(goat1, goat2, goat3, goat4, goat5, goat6, goat7, goat8, goat9);
+
+products.push(product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19);
 
 // render the goat onto the page / add the name
-image1.setAttribute('src', goat1.url);
-image2.setAttribute('src', goat2.url);
-image1.setAttribute('alt', goat1.name);
-image2.setAttribute('alt', goat2.name);
+image1.setAttribute('src', product1.url);
+image2.setAttribute('src', product2.url);
+image3.setAttribute('src', product3.url);
+image1.setAttribute('alt', product1.name);
+image2.setAttribute('alt', product2.name);
+image3.setAttribute('alt', product3.name);
 
-console.log(goats);
+
+console.log(products);
 
 
 // add an event listener that runs some code when a goat picture is clicked.
-let goatImages = document.getElementById('goats');
+let goatImages = document.getElementById('products');
 
 // when might you remove the event listener from the GoatImages HTML element
 // goatImages.removeEventListener()
@@ -46,19 +61,19 @@ goatImages.addEventListener('click', function(event) {
 
   // add 1 to number of clicks
     // search our array of goats for the goat object that matched the alt
-  findGoat(event.target.alt);
+  findProducts(event.target.alt);
 
   // show 2 different images after a picture is clicked.
-  renderNewGoats();
+  renderNewProducts();
 });
 
-function findGoat(alt) {
-  for (let i =0; i< goats.length; i++) {
-    if (goats[i].name === alt) {
-      goats[i].clicks++;
+function findProducts(alt) {
+  for (let i =0; i< products.length; i++) {
+    if (products[i].name === alt) {
+      products[i].clicks++;
     }
   }
-  console.log(goats);
+  console.log(products);
 }
 
 function renderNewGoats() {
