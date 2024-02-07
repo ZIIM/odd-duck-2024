@@ -120,7 +120,7 @@ function findProducts(alt) {
 }
 
 function renderNewProducts() {
-  // generate a random index betwee 0 and the length of our goats array
+  // generate a random index betwee 0 and the length of our products array
   let index1 = Math.floor(Math.random() * products.length);
   let index2 = Math.floor(Math.random() * products.length);
   let index3 = Math.floor(Math.random() * products.length);
