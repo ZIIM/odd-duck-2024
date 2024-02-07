@@ -7,6 +7,14 @@ let image3 = document.getElementById('image3');
 let totalRounds = 25;
 let currentRound= 0;
 
+// button that clears the DATA IN STORAGE
+const ctx = document.getElementById('myChart');
+let clearButton = document.getElementById('start-over');
+clearButton.addEventListener('click', function () {
+  clearData();
+});
+// ^^^^^^ CLEARS DATA IN STORAGE ^^^^^
+
 // constructor function -> 'this' is the object we are creating.
 function Product(url, name) {
   this.url = url;
@@ -105,7 +113,7 @@ function showResults() {
   let list = document.getElementById('results-list');
   for (let i = 0; i < products.length; i++) {
     let paragraph = document.createElement('p');
-    paragraph.textContent = `${products[i].name} had ${products[i].clicks} votes, and was seen ${products[i].timesShown} times.`
+    paragraph.textContent = `${products[i].name} had ${products[i].clicks} votes, and was seen ${products[i].timesShown} times.`;
     list.appendChild(paragraph);
   }
 }
