@@ -153,7 +153,7 @@ function getNames() {
   return names;
 }
 
-// get an array of all timesClicked from the goats array.
+// get an array of all timesClicked from the products array.
 function getClicks() {
   let clicks = [];
   for (let i = 0; i < products.length; i++) {
@@ -162,7 +162,7 @@ function getClicks() {
   return clicks;
 }
 
-// get an array of all goat names from the goats array.
+// get an array of all product names from the products array.
 function getViews() {
   let views = [];
   for (let i = 0; i < products.length; i++) {
