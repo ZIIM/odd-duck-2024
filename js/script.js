@@ -1,5 +1,12 @@
 'use strict';
 
+const ctx = document.getElementById('myChart');
+let clearButton = document.getElementById('start-over');
+clearButton.addEventListener('click', function () {
+  clearData();
+});
+
+
 let dataFromStorage = fetchData();
 console.log('here is our data', dataFromStorage);
 let products = [];
@@ -11,7 +18,7 @@ let image3 = document.getElementById('image3');
 if (dataFromStorage) {
   products = dataFromStorage;
   let product1 = products[0];
-  console.log('HERE IS GOAT FROM STORAGE', product1);
+  console.log('HERE IS PRODUCT FROM STORAGE', product1);
   let product2 = products[1];
   let product3 = products[2];
 
@@ -30,19 +37,19 @@ if (dataFromStorage) {
   let product4 = new Product('img/img/boots.jpg', 'BOOTS');
   let product5 = new Product('img/img/breakfast.jpg', 'BREAKFAST');
   let product6 = new Product('img/img/bubblegum.jpg', 'BUBBLEGUM');
-  let product7 = new Product(img/img/chair.jpg, CHAIR);
-  let product8 = new Product(img/img/cthulhu.jpg, CTHULHU);
-  let product9 = new Product(img/img/dog-duck.jpg, DOG-DUCK);
-  let product10 = new Product(img/img/dragon.jpg, DRAGON);
-  let product11 = new Product(img/img/pen.jpg, PEN);
-  let product12 = new Product(img/img/pet-sweep.jpg, PET-SWEEP);
-  let product13 = new Product(img/img/scissors.jpg, SCISSORS);
-  let product14 = new Product(img/img/shark.jpg, SHARK);
-  let product15 = new Product(img/img/sweep.png, SWEEP);
-  let product16 = new Product(img/img/tauntaun.jpg, TAUNTAUN);
-  let product17 = new Product(img/img/unicorn.jpg, UNICORN);
-  let product18 = new Product(img/img/water-can.jpg, WATER-CAN);
-  let product19 = new Product(img/img/wine-glass.jpg, WINE-GLASS);
+  let product7 = new Product('img/img/chair.jpg', 'CHAIR');
+  let product8 = new Product('img/img/cthulhu.jpg', 'CTHULHU');
+  let product9 = new Product('img/img/dog-duck.jpg', 'DOG-DUCK');
+  let product10 = new Product('img/img/dragon.jpg', 'DRAGON');
+  let product11 = new Product('img/img/pen.jpg', 'PEN');
+  let product12 = new Product('img/img/pet-sweep.jpg', 'PET-SWEEP');
+  let product13 = new Product('img/img/scissors.jpg', 'SCISSORS');
+  let product14 = new Product('img/img/shark.jpg', 'SHARK');
+  let product15 = new Product('img/img/sweep.png', 'SWEEP');
+  let product16 = new Product('img/img/tauntaun.jpg', 'TAUNTAUN');
+  let product17 = new Product('img/img/unicorn.jpg', 'UNICORN');
+  let product18 = new Product('img/img/water-can.jpg', 'WATER-CAN');
+  let product19 = new Product('img/img/wine-glass.jpg', 'WINE-GLASS');
 
   products.push(
     product1,
@@ -65,15 +72,15 @@ if (dataFromStorage) {
     product18,
     product19);
 
-  // render the goat onto the page / add the name
-  image1.setAttribute("src", product1.url);
-  image1.setAttribute("alt", product1.name);
+  // render the product onto the page / add the name
+  image1.setAttribute('src', product1.url);
+  image1.setAttribute('alt', product1.name);
   product1.timesShown++;
-  image2.setAttribute("src", product2.url);
-  image2.setAttribute("alt", product2.name);
+  image2.setAttribute('src', product2.url);
+  image2.setAttribute('alt', product2.name);
   product2.timesShown++;
-  image3.setAttribute("src", product3.url);
-  image3.setAttribute("alt", product3.name);
+  image3.setAttribute('src', product3.url);
+  image3.setAttribute('alt', product3.name);
 }
 
 function Product(url, name) {
@@ -98,7 +105,7 @@ let handleClick = function(event) {
 
   // show 2 different images after a picture is clicked.
   renderNewProducts();
-  currentRound = roundCount(totalRounds, currentRound);
+currentRound = roundCount(totalRounds, currentRound);
 };
 
 productImages.addEventListener('click', handleClick);
