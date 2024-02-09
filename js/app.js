@@ -19,7 +19,7 @@ function saveData(data) {
 }
 
 function fetchData() {
-return JSON.parse(localStorage.getItem('goatData'));
+  return JSON.parse(localStorage.getItem('goatData'));
 }
 
 function clearData() {
