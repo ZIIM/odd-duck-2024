@@ -13,6 +13,8 @@ let products = [];
 let image1 = document.getElementById('image1');
 let image2 = document.getElementById('image2');
 let image3 = document.getElementById('image3');
+let totalRounds = 25;
+let currentRound = 0;
 
 // condition that determines what state our app is in
 if (dataFromStorage) {
@@ -105,7 +107,7 @@ let handleClick = function(event) {
 
   // show 2 different images after a picture is clicked.
   renderNewProducts();
-currentRound = roundCount(totalRounds, currentRound);
+  currentRound = roundCount(totalRounds, currentRound);
 };
 
 productImages.addEventListener('click', handleClick);
